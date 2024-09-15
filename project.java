@@ -19,12 +19,11 @@ class BinarySearchTree {
         root = null;
     }
 
-    // Insert a key into the tree
     void insert(int key) {
         root = insertRec(root, key);
     }
 
-    // A recursive function to insert a new key in the BST
+
     Node insertRec(Node root, int key) {
         if (root == null) {
             root = new Node(key);
@@ -39,7 +38,7 @@ class BinarySearchTree {
         return root;
     }
 
-    // Search for a key in the tree
+  
     boolean search(int key) {
         return searchRec(root, key) != null;
     }
@@ -53,7 +52,7 @@ class BinarySearchTree {
         return searchRec(root.right, key);
     }
 
-    // Delete a key from the tree
+
     void delete(int key) {
         root = deleteRec(root, key);
     }
@@ -87,7 +86,6 @@ class BinarySearchTree {
         return minValue;
     }
 
-    // InOrder traversal
     void inorder() {
         inorderRec(root);
     }
@@ -100,7 +98,6 @@ class BinarySearchTree {
         }
     }
 
-    // PreOrder traversal
     void preorder() {
         preorderRec(root);
     }
@@ -113,7 +110,6 @@ class BinarySearchTree {
         }
     }
 
-    // PostOrder traversal
     void postorder() {
         postorderRec(root);
     }
@@ -126,11 +122,11 @@ class BinarySearchTree {
         }
     }
 
-    // Main method to test the tree functionality
+  
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
 
-        // Insert elements
+       
         bst.insert(50);
         bst.insert(30);
         bst.insert(20);
@@ -139,7 +135,7 @@ class BinarySearchTree {
         bst.insert(60);
         bst.insert(80);
 
-        // Traversal outputs
+    
         System.out.println("InOrder traversal:");
         bst.inorder();
 
@@ -149,11 +145,11 @@ class BinarySearchTree {
         System.out.println("\nPostOrder traversal:");
         bst.postorder();
 
-        // Search for elements
+
         System.out.println("\n\nSearch for 40: " + bst.search(40));
         System.out.println("Search for 100: " + bst.search(100));
 
-        // Delete elements
+       
         System.out.println("\nDelete 20");
         bst.delete(20);
         System.out.println("InOrder traversal after deletion:");
