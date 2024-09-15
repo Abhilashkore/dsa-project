@@ -1,6 +1,5 @@
 class BinarySearchTree {
 
-    // Node class for the tree structure
     class Node {
         int key;
         Node left, right;
@@ -10,11 +9,7 @@ class BinarySearchTree {
             left = right = null;
         }
     }
-
-    // Root of the Binary Search Tree
     Node root;
-
-    // Constructor
     BinarySearchTree() {
         root = null;
     }
